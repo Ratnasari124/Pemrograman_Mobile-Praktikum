@@ -45,9 +45,34 @@ class MyApp extends StatelessWidget {
       ],
     ),
   );
+  //Praktikum 3 Langkah 1
+  Widget textSection = Container(
+    padding: const EdgeInsets.all(32),
+    child: const Text(
+      'Wisata petualang kini sedang diperkenalkan Pemerintah Provinsi Jawa Timur (Pemprov Jatim)' 
+      'Adalah menjajal serunya berwisata sekaligus berpetualang di Bukit Jengkoang di Kota Batu.'
+      'Bukan sembarangan, Bukit Jengkoang ini tak hanya menawarkan pemandangan alam indah,'
+      'tapi juga memiliki wisata petualangan seru. Dengan menggunakan mobil jeep terbuka,'
+      'wisatawan diajak off road menuju Bukit Jengkoang.'
+      '(Ratnasari - 2241720007)🙂.',
+      softWrap: true,
+    ),
+  );
   //Langkah 1
   @override
   Widget build(BuildContext context) {
+
+    //Button Section Praktikum 2 Langkah 2
+    Color color = Theme.of(context).primaryColor;
+
+    Widget buttonSection = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        _buildButtonColumn(color, Icons.call, 'CALL'),
+        _buildButtonColumn(color, Icons.near_me, 'ROUTE'),
+        _buildButtonColumn(color, Icons.share, 'SHARE'),
+      ],
+    );
     return MaterialApp(
       title: 'Flutter layout: Ratnasari 2241720007',
       home: Scaffold(
@@ -57,9 +82,33 @@ class MyApp extends StatelessWidget {
         body : Column(
           children: [
             titleSection,
+            buttonSection, //Praktikum 2 Langkah 3
+            textSection, //Praktikum 3 Langkah 2
             ],
         ),
       ),
+    );
+  }
+
+  //Praktikum 2 Langkah 1 
+  Column _buildButtonColumn(Color color, IconData icon, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(icon, color: color),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
