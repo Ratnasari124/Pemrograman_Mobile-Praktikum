@@ -77,10 +77,17 @@ class MyApp extends StatelessWidget {
       title: 'Flutter layout: Ratnasari 2241720007',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter layout demo'),
+          title: const Text('My App'),
         ),
-        body : Column(
+        body : ListView(
           children: [
+            //Praktikum 4 Langkah 2
+            Image.asset(
+              'asset/img1.png',
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover,
+            ),
             titleSection,
             buttonSection, //Praktikum 2 Langkah 3
             textSection, //Praktikum 3 Langkah 2
