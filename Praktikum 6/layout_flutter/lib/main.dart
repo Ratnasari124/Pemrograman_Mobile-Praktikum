@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
+              const Text(
                 'Batu, Malang, Indonesia',
                 style: TextStyle(
                   color: Colors.grey, // Warna abu-abu
@@ -32,13 +32,13 @@ class MyApp extends StatelessWidget {
         ),
         Container(
           padding: const EdgeInsets.all(32.0), // Jawaban soal 3
-          child: Row(
+          child: const Row(
             children: [
               Icon(
                 Icons.star, // Ikon bintang
                 color: Colors.red, // Warna merah
               ),
-              const Text('41'), // Teks "41"
+              Text('41'), // Teks "41"
             ],
           ),
         ),
@@ -58,6 +58,8 @@ class MyApp extends StatelessWidget {
       softWrap: true,
     ),
   );
+
+  MyApp({super.key});
   //Langkah 1
   @override
   Widget build(BuildContext context) {

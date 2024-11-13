@@ -54,10 +54,10 @@ class HomePage extends StatelessWidget {
         title: const Text('Na Skincare Shop'),
         backgroundColor: const Color.fromARGB(255, 228, 124, 127),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: const Color.fromARGB(255, 228, 124, 124),
+      bottomNavigationBar: const BottomAppBar(
+        color: Color.fromARGB(255, 228, 124, 124),
         height: 45,
-        child: const Row(
+        child: Row(
           children: [
             Padding(padding: EdgeInsets.all(8.0)),
             Text(
@@ -142,7 +142,7 @@ class HomePage extends StatelessWidget {
                             style: const TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: const Color.fromARGB(255, 228, 124, 179),
+                              color: Color.fromARGB(255, 228, 124, 179),
                             ),
                           ),
                           Text(

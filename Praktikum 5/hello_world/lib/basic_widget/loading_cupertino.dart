@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart'; // Import the Cupertino package
 
 class MyTextWidget extends StatelessWidget {
-  const MyTextWidget({Key? key}) : super(key: key);
+  const MyTextWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

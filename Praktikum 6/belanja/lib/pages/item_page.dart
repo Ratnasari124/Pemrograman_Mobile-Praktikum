@@ -53,10 +53,10 @@ class ItemPage extends StatelessWidget {
                             children: [
                               Text(
                                 item.name,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15,
-                                  color: const Color.fromARGB(255, 228, 124, 179),
+                                  color: Color.fromARGB(255, 228, 124, 179),
                                 ),
                                 textAlign: TextAlign.left,
                               ),
